@@ -1,12 +1,12 @@
 module.exports = {
   title: `Sacred Wood's World`,
   description: `Sacred Wood's personal website, dedicated to creating an integrated full-process site for the development of code, documentation, tutorials, videos, component market, version management, etc.`,
-  base: '/wood/',
+  base: '/blog/',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   host: '0.0.0.0',
   port: 8091,
   temp: '/path/to/@vuepress/core/.temp', // 指定客户端文件的临时目录
-  dest: '.vuepress/dist',
+  dest: 'dist',
   patterns: ['**/*.md', '**/*.vue'],
   markdown: {
     lineNumbers: true,
@@ -44,19 +44,26 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       {
-        text: 'Guide',
-        ariaLabel: '/guide/',
-        items: [
-          { text: 'Installation', link: '/guide/installation/' },
-          { text: 'Introduction', link: '/guide/introduction/' },
-        ],
-      },
-      {
         text: 'Learn',
         ariaLabel: '/learn/',
         items: [
-          { text: 'Installation', link: '/learn/installation/' },
-          { text: 'Introduction', link: '/learn/introduction/' },
+          {
+            text: 'Documentation',
+            items: [
+              {
+                text: 'Guide',
+                link: '/guide/introduction/',
+              },
+              {
+                text: 'API',
+                link: '/api/',
+              },
+              {
+                text: 'Style Guide',
+                link: '/style_guide/',
+              },
+            ],
+          },
         ],
       },
       {
@@ -83,7 +90,18 @@ module.exports = {
         ],
       },
     ],
-    sidebar: ['/', '/guide/installation', ['/learn', '学习']],
+    sidebar: [
+      {
+        title: '教程',
+        collapsable: false,
+        children: ['/guide/', '/guide/installation/', '/guide/introduction/'],
+      },
+      {
+        title: '学习',
+        collapsable: false,
+        children: ['/learn/'],
+      },
+    ],
   },
   locales: {
     // 键名是该语言所属的子路径
