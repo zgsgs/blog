@@ -2,7 +2,7 @@ module.exports = {
   title: `Sacred Wood's World`,
   description: `Sacred Wood's personal website, dedicated to creating an integrated full-process site for the development of code, documentation, tutorials, videos, component market, version management, etc.`,
   base: '/',
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/logo/m4.png' }]],
   host: '0.0.0.0',
   port: 8091,
   temp: '/path/to/@vuepress/core/.temp', // 指定客户端文件的临时目录
@@ -90,18 +90,19 @@ module.exports = {
         ],
       },
     ],
-    sidebar: [
-      {
-        title: '教程',
-        collapsable: false,
-        children: ['/guide/', '/guide/installation/', '/guide/introduction/'],
-      },
-      {
-        title: '学习',
-        collapsable: false,
-        children: ['/learn/'],
-      },
-    ],
+    // sidebar: [
+    //   {
+    //     title: '基础',
+    //     collapsable: false,
+    //     path: '/guide/',
+    //     sidebarDepth: 2,
+    //     children: ['installation', 'introduction', 'instance'],
+    //   },
+    // ],
+    sidebar: {
+      '/guide/': ['', 'installation', 'introduction', 'instance'],
+      '/': ['', 'contact', 'about'],
+    },
   },
   locales: {
     // 键名是该语言所属的子路径

@@ -2,9 +2,9 @@
 home: true
 heroImage: /logo/vue.png
 heroText: Vue核心源码
-tagline: 啃嘴硬的骨头,装最硬核的逼
+tagline: 啃最硬的骨头,装最硬核的逼
 actionText: 快速上手 →
-actionLink: /vue/guide
+actionLink: /vue/guide/introduction
 features:
   - title: 简单明确
     details: 从最简单的代码逻辑入手,梳理Vue核心源码,并加入清晰的代码注释辅助解读
