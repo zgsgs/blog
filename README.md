@@ -14,7 +14,7 @@
 
 ## 部署报错
 
-1. 打包报错：找不到占位符|页面空白不显示也不报错
+1. 打包报错：Error: Content placeholder not found in template.|页面空白不显示也不报错
 
 > 原因是`docs/.vuepress/templates`存在且无内容或内容错误;删除该文件夹即可
 
