@@ -1,7 +1,7 @@
 module.exports = {
   title: `Sacred Wood's World`,
   description: `Sacred Wood's personal website, dedicated to creating an integrated full-process site for the development of code, documentation, tutorials, videos, component market, version management, etc.`,
-  base: '/blog/',
+  base: '/',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   host: '0.0.0.0',
   port: 8091,
@@ -16,7 +16,7 @@ module.exports = {
     '/path/to/bar.js', // 使用绝对路径
   ],
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo/m4.png',
     sidebar: 'auto',
     search: false,
     searchMaxSuggestions: 10,
