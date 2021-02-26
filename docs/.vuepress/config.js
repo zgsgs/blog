@@ -17,9 +17,9 @@ module.exports = {
   ],
   themeConfig: {
     logo: '/logo/m4.png',
-    sidebar: 'auto',
-    sidebarDepth: 2,
-    search: false,
+    // sidebar: 'auto',
+    // sidebarDepth: 3,
+    search: true,
     searchMaxSuggestions: 10,
     displayAllHeaders: true, // 默认值：false
     smoothScroll: true,
@@ -100,6 +100,48 @@ module.exports = {
     //     children: ['installation', 'introduction', 'instance'],
     //   },
     // ],
+
+    sidebar: {
+      '/vue/': [
+        {
+          title: 'Vue源码分析',
+          collapsable: false,
+          children: [
+            { title: '教程', path: '/guide/' },
+            { title: '介绍', path: '/guide/installation' },
+            { title: '安装', path: '/guide/introduction' },
+          ],
+        },
+        {
+          title: '案例',
+          collapsable: false,
+          children: [
+            { title: '案例1', path: '/demo/1/' },
+            { title: '案例2', path: '/demo/2/' },
+          ],
+        },
+      ],
+      '/language/': [
+        {
+          title: '国际化',
+          collapsable: false,
+          children: [
+            { title: 'Chinese', path: '/language/chinese/' },
+            { title: 'English', path: '/language/english/' },
+          ],
+        },
+      ],
+      '/git/': [
+        {
+          title: 'Git使用教程',
+          collapsable: false,
+          children: [
+            { title: '基本原理', path: '/introduction/' },
+            { title: '简单使用', path: '/use/' },
+          ],
+        },
+      ],
+    },
   },
   locales: {
     // 键名是该语言所属的子路径
