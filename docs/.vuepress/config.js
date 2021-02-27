@@ -14,6 +14,21 @@ module.exports = config({
   markdown: {
     lineNumbers: true,
   },
+  head: [
+    // 网页标签栏图标
+    ['link', { rel: 'icon', href: '/vuepress/favicon.ico' }],
+    // 移动栏优化
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+    // 引入jquery
+    [
+      'script',
+      {
+        language: 'javascript',
+        type: 'text/javascript',
+        src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js',
+      },
+    ],
+  ],
   plugins: [
     [
       'vuepress-plugin-auto-sidebar',
@@ -49,6 +64,7 @@ module.exports = config({
     searchPlaceholder: 'Search...',
     displayAllHeaders: true, // 默认值：false
     smoothScroll: true,
+    copyright: true,
     // lastUpdated: '最后更新时间',
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
     repo: 'SacredWood/blog',
@@ -74,14 +90,30 @@ module.exports = config({
     //   apiKey: '<API_KEY>',
     //   indexName: '<INDEX_NAME>',
     // },
-    comment: {
-      type: 'valine', // "valine" 或 "vssue"
-
-      // valine 模式下
-      appId: 'VWDbcc1sF3nBKpkpE1hGDabl-gzGzoHsz', // your appId
-      appKey: 'XQyS2NhvmLGAsuGKGcAs4o3v', // your appKey
+    encrypt: {
+      // 这会加密整个 guide 目录，并且两个密码都是可用的
+      // '/guide/': ['1234', '5678'],
     },
-    pageInfo: ['author', 'time', 'visitor', 'category', 'tag', 'word', 'readtime'],
+    pageInfo: ['author', 'time', 'visitor', 'category', 'tag', 'word'],
+    mdEnhance: {
+      align: true,
+      // 启用下角标功能
+      sub: true,
+      // 启用上角标
+      sup: true,
+      footnote: true,
+      mark: true,
+      tex: true,
+      flowchart: true,
+      demo: true,
+    },
+    comment: {
+      type: 'valine',
+      // type: 'vssue',
+      // valine 模式下
+      appId: 'VWDbcc1sF3nBKpkpE1hGDabl-gzGzoHsz',
+      appKey: 'XQyS2NhvmLGAsuGKGcAs4o3v',
+    },
     blog: {
       links: {
         Gitlab: 'http://code.voxto.cn/',
