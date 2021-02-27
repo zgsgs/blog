@@ -1,3 +1,10 @@
+---
+sidebarDepth: 3
+sticky: true
+category: Vue
+tags: [Vue, 源码解析]
+---
+
 # 安装
 
 ## 开发工具
@@ -14,6 +21,18 @@
 
 ### VS Code
 
+浏览器是前端最核心的开发工具之一,其中的 `Chrome` 更是其中的佼佼者.不论是对各种 `HTML\CSS\JavaScript` 新属性的积极支持,还是 V8 引擎的开拓性影响都有着举足轻重的地位.可以说占据市场份额的半壁江山,也是实至名归的.
+
+我日常开发的大部分页面布局样式\代码逻辑都是在`Chrome`上调试的,占据了我开发工具的几乎 50%的时间.这上面有着非常丰富的工具集,完全可以单独出一套教程进行深度学习.这里我推荐大家看一看老外写的官方文档.
+
+[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+
 ### Git
+
+浏览器是前端最核心的开发工具之一,其中的 `Chrome` 更是其中的佼佼者.不论是对各种 `HTML\CSS\JavaScript` 新属性的积极支持,还是 V8 引擎的开拓性影响都有着举足轻重的地位.可以说占据市场份额的半壁江山,也是实至名归的.
+
+我日常开发的大部分页面布局样式\代码逻辑都是在`Chrome`上调试的,占据了我开发工具的几乎 50%的时间.这上面有着非常丰富的工具集,完全可以单独出一套教程进行深度学习.这里我推荐大家看一看老外写的官方文档.
+
+[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
 
 ### Node

@@ -12,6 +12,11 @@
 
 以上功能将逐步实现
 
+## 插件依赖
+
+1. vuepress-plugin-auto-sidebar
+   [vuepress 自动生成侧边栏](https://shanyuhai123.github.io/vuepress-plugin-auto-sidebar/)
+
 ## 部署报错
 
 1. 打包报错：Error: Content placeholder not found in template.|页面空白不显示也不报错
@@ -30,3 +35,7 @@
 
 > 导致部署页面无样式
 > 在文件`docs/.vuepress/config.js`中的`base`配置错误,目前我只能用默认值`/`解决
+
+## 项目现状
+
+由于本项目的侧边栏自动生成、评论、图标等功能需要大量的定制工作，所以不但算继续研究下去。博客将转用`vuepress-theme-reco`主题重新构建。

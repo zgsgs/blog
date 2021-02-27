@@ -1,6 +1,8 @@
-module.exports = {
-  title: `Sacred Wood's World`,
-  description: `Sacred Wood's personal website, dedicated to creating an integrated full-process site for the development of code, documentation, tutorials, videos, component market, version management, etc.`,
+const { config } = require('vuepress-theme-hope');
+
+module.exports = config({
+  title: `神木&世界`,
+  description: `致力于打造一体化开发全流程站点`,
   base: '/',
   head: [['link', { rel: 'icon', href: '/logo/m4.png' }]],
   host: '0.0.0.0',
@@ -8,19 +10,43 @@ module.exports = {
   temp: '/path/to/@vuepress/core/.temp', // 指定客户端文件的临时目录
   dest: 'dist',
   patterns: ['**/*.md', '**/*.vue'],
+  theme: 'hope',
   markdown: {
     lineNumbers: true,
   },
-  extraWatchFiles: [
-    '.vuepress/foo.js', // 使用相对路径
-    '/path/to/bar.js', // 使用绝对路径
+  plugins: [
+    [
+      'vuepress-plugin-auto-sidebar',
+      {
+        titleMode: 'titlecase', // 可选 `default`、`lowercase`、`uppercase`、`capitalize`、`camelcase`、`kebabcase`、`titlecase`
+        nav: true,
+        collapsable: false,
+      },
+    ],
   ],
+  locales: {
+    '/': {
+      lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
+      title: '神木&世界',
+      description: '致力于打造一体化开发全流程站点',
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: `Sacred Wood's World`,
+      description: `COMMITTED TO BUILDING AN INTEGRATED DEVELOPMENT FULL-PROCESS SITE`,
+    },
+  },
   themeConfig: {
+    hostname: 'sacredwood.github.io',
     logo: '/logo/m4.png',
-    // sidebar: 'auto',
-    // sidebarDepth: 3,
+    baseLang: 'zh-CN',
+    author: 'Jason',
+    sidebar: 'auto',
+    sidebarDepth: 3,
+    sidebarIcon: false,
     search: true,
     searchMaxSuggestions: 10,
+    searchPlaceholder: 'Search...',
     displayAllHeaders: true, // 默认值：false
     smoothScroll: true,
     // lastUpdated: '最后更新时间',
@@ -29,6 +55,8 @@ module.exports = {
     // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
     repoLabel: '查看源码',
+    // 是否在导航栏右侧显示仓库链接，默认为 `true`
+    repoDisplay: true,
 
     // 以下为可选的编辑链接选项
 
@@ -42,37 +70,67 @@ module.exports = {
     editLinks: true,
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！',
+    // algolia: {
+    //   apiKey: '<API_KEY>',
+    //   indexName: '<INDEX_NAME>',
+    // },
+    comment: {
+      type: 'valine', // "valine" 或 "vssue"
+
+      // valine 模式下
+      appId: 'VWDbcc1sF3nBKpkpE1hGDabl-gzGzoHsz', // your appId
+      appKey: 'XQyS2NhvmLGAsuGKGcAs4o3v', // your appKey
+    },
+    pageInfo: ['author', 'time', 'visitor', 'category', 'tag', 'word', 'readtime'],
+    blog: {
+      links: {
+        Gitlab: 'http://code.voxto.cn/',
+        Github: 'https://github.com/SacredWood?tab=repositories',
+      },
+    },
     nav: [
-      { text: 'Home', link: '/' },
+      // 可在每一项中添加 icon 字段来显示图标
       {
-        text: 'Learn',
-        ariaLabel: '/learn/',
+        text: '指南',
+        icon: 'creative',
+        // prefix 字段会为所有的 items 添加这段 prefix
+        // prefix: '/guide/',
         items: [
-          {
-            text: 'Documentation',
-            items: [
-              {
-                text: 'Guide',
-                link: '/guide/introduction/',
-              },
-              {
-                text: 'API',
-                link: '/api/',
-              },
-              {
-                text: 'Style Guide',
-                link: '/style_guide/',
-              },
-            ],
-          },
+          { text: 'Vue源码', link: '/vue/guide/', icon: 'vue' },
+          { text: 'Git教程', link: '/git/', icon: 'git' },
         ],
       },
       {
-        text: 'External',
+        text: '基础',
+        icon: 'info',
+        // prefix 字段会为所有的 items 添加这段 prefix
+        prefix: '/basic/',
+        items: [
+          { text: 'Markdown', link: 'markdown/', icon: 'markdown' },
+          { text: 'VuePress', link: 'vuepress/', icon: 'vuepress' },
+        ],
+      },
+      {
+        text: '项目',
+        icon: 'info',
+        items: [
+          {
+            text: '项目地址',
+            link: 'https://github.com/vuepress-theme-hope/vuepress-theme-hope',
+          },
+          {
+            text: '项目案例',
+            link: '/demo/',
+          },
+        ],
+      },
+      { text: '常见问题', link: '/FAQ/', icon: 'question' },
+      {
+        text: '站点',
         ariaLabel: 'External Link',
         items: [
           {
-            text: 'Code',
+            text: '代码',
             items: [
               { text: 'GitHub', link: 'https://github.com/SacredWood', target: '_blank', rel: '' },
               { text: 'Gitee', link: 'https://gitee.com/SacredWood', target: '_blank', rel: '' },
@@ -82,7 +140,7 @@ module.exports = {
             ],
           },
           {
-            text: 'Design',
+            text: '设计',
             items: [
               { text: 'UI中国', link: 'https://www.ui.cn/', target: '_blank', rel: '' },
               { text: '站酷', link: 'https://www.zcool.com.cn/', target: '_blank', rel: '' },
@@ -91,70 +149,5 @@ module.exports = {
         ],
       },
     ],
-    // sidebar: [
-    //   {
-    //     title: '基础',
-    //     collapsable: false,
-    //     path: '/guide/',
-    //     sidebarDepth: 2,
-    //     children: ['installation', 'introduction', 'instance'],
-    //   },
-    // ],
-
-    sidebar: {
-      '/vue/': [
-        {
-          title: 'Vue源码分析',
-          collapsable: false,
-          children: [
-            { title: '教程', path: '/guide/' },
-            { title: '介绍', path: '/guide/installation' },
-            { title: '安装', path: '/guide/introduction' },
-          ],
-        },
-        {
-          title: '案例',
-          collapsable: false,
-          children: [
-            { title: '案例1', path: '/demo/1/' },
-            { title: '案例2', path: '/demo/2/' },
-          ],
-        },
-      ],
-      '/language/': [
-        {
-          title: '国际化',
-          collapsable: false,
-          children: [
-            { title: 'Chinese', path: '/language/chinese/' },
-            { title: 'English', path: '/language/english/' },
-          ],
-        },
-      ],
-      '/git/': [
-        {
-          title: 'Git使用教程',
-          collapsable: false,
-          children: [
-            { title: '基本原理', path: '/introduction/' },
-            { title: '简单使用', path: '/use/' },
-          ],
-        },
-      ],
-    },
   },
-  locales: {
-    // 键名是该语言所属的子路径
-    // 作为特例，默认语言可以使用 '/' 作为其路径。
-    '/': {
-      lang: '中文', // 将会被设置为 <html> 的 lang 属性
-      title: '神木&世界',
-      description: '神木的个人网站,致力于打造代码,文档,教程,视频,组件市场,版本管理等开发一体化全流程站点',
-    },
-    '/en/': {
-      lang: 'English',
-      title: `Sacred Wood's World`,
-      description: `Sacred Wood's personal website, dedicated to creating an integrated full-process site for the development of code, documentation, tutorials, videos, component market, version management, etc.`,
-    },
-  },
-};
+});
