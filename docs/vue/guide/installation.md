@@ -107,4 +107,36 @@ Markmap 是一个将 Markdown 转换为思维导图的工具。它相对于主�
   topmargin="0"
 />
 
+### 内置流程图
+
+[vuepress-plugin-flowchart](https://flowchart.vuepress.ulivz.com/)可以让你在 Markdown 中直接绘制流程图，就像这样
+
+输入
+
+```
+@flowstart
+cond=>condition: Process?
+process=>operation: Process
+e=>end: End
+
+cond(yes)->process->e
+cond(no)->e
+@flowend
+```
+
+输出
+
+@flowstart
+cond=>condition: Process?
+process=>operation: Process
+e=>end: End
+
+cond(yes)->process->e
+cond(no)->e
+@flowend
+
 ![logo](https://vuepress-theme-hope.github.io/logo.png)
+
+```
+
+```

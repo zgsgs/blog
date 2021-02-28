@@ -94,7 +94,7 @@ module.exports = config({
       // 这会加密整个 guide 目录，并且两个密码都是可用的
       // '/guide/': ['1234', '5678'],
     },
-    pageInfo: ['author', 'time', 'visitor', 'category', 'tag', 'word'],
+    pageInfo: ['Author', 'Time', 'Visitor', 'Category', 'Tag', 'Word', 'ReadTime'],
     mdEnhance: {
       align: true,
       // 启用下角标功能
@@ -106,6 +106,7 @@ module.exports = config({
       tex: true,
       flowchart: true,
       demo: true,
+      presentation: true,
     },
     comment: {
       type: 'valine',
@@ -118,6 +119,9 @@ module.exports = config({
       links: {
         Gitlab: 'http://code.voxto.cn/',
         Github: 'https://github.com/SacredWood?tab=repositories',
+        Gmail: '594zhaogaosheng@gmail.com',
+        QQ: '2087108700',
+        Wechat: 'wulian988',
       },
     },
     nav: [
