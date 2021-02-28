@@ -52,7 +52,7 @@ module.exports = config({
     },
   },
   themeConfig: {
-    hostname: 'sacredwood.github.io',
+    hostname: 'https://sacredwood.github.io',
     logo: '/logo/m4.png',
     baseLang: 'zh-CN',
     author: 'Jason',

@@ -48,3 +48,58 @@ J(\theta_0,\theta_1) = \sum_{i=0}
 $$
 
 @slideend
+
+## 代码演示 普通代码
+
+::: demo 一个普通 Demo
+
+```md
+<span class="token title important"><span class="token punctuation">#</span> 标题</span>
+
+十分帅
+```
+
+```ts
+<span class="token keyword">const</span> message<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">"Mr.Hope"</span><span class="token punctuation">;</span>
+
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> message<span class="token punctuation">;</span>
+```
+
+```scss
+<span class="token selector">h1 </span><span class="token punctuation">{</span>
+  <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+
+  <span class="token selector">+ p </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+```
+
+:::
+
+## 代码演示 普通 Demo2
+
+::: demo 一个普通 Demo
+
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation"><</span>h1</span><span class="token punctuation">></span></span>Mr.Hope<span class="token tag"><span class="token tag"><span class="token punctuation"></</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation"><</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation"><</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>very<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>十分<span class="token tag"><span class="token tag"><span class="token punctuation"></</span>span</span><span class="token punctuation">></span></span> 帅<span class="token tag"><span class="token tag"><span class="token punctuation"></</span>p</span><span class="token punctuation">></span></span>
+```
+
+```js
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#very"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"十分帅"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+```
+
+```css
+<span class="token selector">span</span>
+  <span class="token punctuation">{</span>
+  <span class="token property">color</span>
+  <span class="token punctuation">:</span>
+  red
+  <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+```
+
+:::
