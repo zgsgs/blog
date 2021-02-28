@@ -65,7 +65,6 @@ module.exports = config({
     displayAllHeaders: true, // 默认值：false
     smoothScroll: true,
     copyright: true,
-    // lastUpdated: '最后更新时间',
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
     repo: 'SacredWood/blog',
     // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
@@ -116,6 +115,7 @@ module.exports = config({
       appKey: 'XQyS2NhvmLGAsuGKGcAs4o3v',
     },
     blog: {
+      intro: '/about/author/',
       links: {
         Gitlab: 'http://code.voxto.cn/',
         Github: 'https://github.com/SacredWood?tab=repositories',
@@ -180,6 +180,7 @@ module.exports = config({
             items: [
               { text: 'UI中国', link: 'https://www.ui.cn/', target: '_blank', rel: '' },
               { text: '站酷', link: 'https://www.zcool.com.cn/', target: '_blank', rel: '' },
+              { text: '花瓣', link: 'https://huaban.com/home/', target: '_blank', rel: '' },
             ],
           },
         ],

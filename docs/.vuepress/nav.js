@@ -1,1 +1,0 @@
-module.exports = [{"text":"en","items":[{"text":"Guide","link":"/en/vue/guide/"},{"text":"Tools","link":"/en/vue/tools/"},{"text":"Vue","link":"/en/vue/"}]},{"text":"vue","items":[{"text":"Guide","link":"/vue/guide/"},{"text":"Tools","link":"/vue/tools/"},{"text":"Vue","link":"/vue/"}]}];
