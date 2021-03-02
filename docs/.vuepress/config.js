@@ -93,7 +93,7 @@ module.exports = config({
       // 这会加密整个 guide 目录，并且两个密码都是可用的
       // '/guide/': ['1234', '5678'],
     },
-    pageInfo: ['Author', 'Time', 'Visitor', 'Category', 'Tag', 'Word', 'ReadTime'],
+    pageInfo: ['author', 'time', 'visitor', 'category', 'tag', 'word', 'reading-time'],
     mdEnhance: {
       align: true,
       // 启用下角标功能
