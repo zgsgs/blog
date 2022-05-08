@@ -9424,10 +9424,10 @@ vuepress-plugin-add-this@1.11.0:
   dependencies:
     "@mr-hope/vuepress-types" "1.11.0"
 
-vuepress-plugin-auto-sidebar@^1.5.0:
+vuepress-plugin-auto-sidebar@1.5.0:
   version "1.5.0"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-auto-sidebar/download/vuepress-plugin-auto-sidebar-1.5.0.tgz#fc11b32f5e7976394bab01edd68cd602b1c0cefe"
-  integrity sha1-/BGzL155djlLqwHt1ozWArHAzv4=
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-auto-sidebar/-/vuepress-plugin-auto-sidebar-1.5.0.tgz#fc11b32f5e7976394bab01edd68cd602b1c0cefe"
+  integrity sha512-PsF+XRWBZw+xbh/4IzTw6VbM4PoMhEMemHgK+c1Lmf7+9Fq3FK/iB4/P6Bp3VmlY+GenJ95MtwKK0BRjuK4RCQ==
   dependencies:
     colors "^1.4.0"
 
@@ -9541,7 +9541,7 @@ vuepress-plugin-typescript@^0.3.1:
     cache-loader "^3.0.0"
     ts-loader "^7.0.3"
 
-vuepress-theme-hope@^1.11.1:
+vuepress-theme-hope@1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/vuepress-theme-hope/-/vuepress-theme-hope-1.11.1.tgz#eeb712185df9852ed57a64ce2de78c42745677eb"
   integrity sha512-eKVe+OxsKwCSwHY7pV/eR2HiAm9l7WUzbUn4OnhswQXo5tpJJE+90CMAcdKv6mQYT33Ooqft5ZStNCt4YkwHug==
@@ -9580,7 +9580,7 @@ vuepress-theme-hope@^1.11.1:
     vuepress-plugin-smooth-scroll "^0.0.10"
     vuepress-plugin-typescript "^0.3.1"
 
-vuepress@^1.8.0:
+vuepress@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.8.0.tgz#0139d466b33fbfdb628abb76d555368b85cf9772"
   integrity sha512-YvNitvoEc+JSJRv1W+IoRnvOTFyTWyUMuGuF2kTIbiSwIHb1hNinc3lqNSeBQJy7IBqyEzK5fnTq1mlynh4gwA==
